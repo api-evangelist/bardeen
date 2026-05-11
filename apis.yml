@@ -30,6 +30,44 @@ common:
     url: https://www.bardeen.ai
   - type: Documentation
     url: https://docs.bardeen.ai
+  - type: Integrations
+    url: https://www.bardeen.ai/integrations
+integrations:
+  - name: Bardeen Logo Default
+  - name: Bardeen Scraper
+  - name: Bardeen Web Search
+  - name: Bardeen Enrichment
+  - name: Bardeen AI Tools
+  - name: Google Sheets
+  - name: Airtable
+  - name: Notion
+  - name: Bardeen Recruiting
+  - name: Bardeen Music
+  - name: Bardeen Real Estate
+  - name: Bardeen VPs
+  - name: Bardeen Event Services
+  - name: Bardeen Blog
+  - name: Bardeen Customer Stories
+  - name: Bardeen Logo Icon Default
+  - name: Bardeen Careers
+  - name: Bardeen Community
+  - name: Bardeen Templates
+  - name: Bardeen Credits
+  - name: Bardeen CSV
+  - name: Salesforce
+  - name: HubSpot
+  - name: Pipedrive
+  - name: Monday.com
+  - name: SmartSuite
+  - name: Zoho
+  - name: Salesloft
+  - name: Lemlist
+  - name: Outreach
+  - name: GDPR Certified
+  - name: AICPA SOC2 Certificate
+  - name: CASA Tier 2 Certified
+  - name: CASA Tier 3 Certified
+  - name: deel
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
