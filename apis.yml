@@ -26,6 +26,10 @@ apis:
       - type: Documentation
         url: https://docs.bardeen.ai
 common:
+  - type: GitHubOrganization
+    url: https://github.com/bardeenai
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/bardeen
   - type: Website
     url: https://www.bardeen.ai
   - type: Documentation
