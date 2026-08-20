@@ -19,6 +19,9 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bardeen.png
 tags:
   - AI Automation
+  - Workflow-Automation
+tags_raw:
+  - AI Automation
   - Workflow Automation
 url: >-
   https://raw.githubusercontent.com/api-evangelist/bardeen/refs/heads/main/apis.yml
