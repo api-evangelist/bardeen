@@ -1,0 +1,75 @@
+generated: '2026-08-29'
+method: probed
+source: live GET probes of every host named in apis.yml (www.bardeen.ai, bardeen.ai) plus the
+  sibling product host getwiq.ai (WIQ, same company — Chrome Web Store listing names the
+  publisher as "Bardeen Inc", contact chrome-web-store@bardeen.ai)
+description: >-
+  Bardeen serves no /.well-known discovery surface. Every RFC 8615 path probed on every host
+  the company controls returned 404. Recorded as an honest absence: no WellKnown or SecurityTxt
+  pointer is wired in apis.yml, because none of these documents is served. Note that the
+  documented security contact (security@bardeen.ai, published on https://www.bardeen.ai/security)
+  is NOT machine-readable — a two-line /.well-known/security.txt would make it so.
+hit_count: 0
+hosts:
+  - host: https://www.bardeen.ai
+    note: Webflow-hosted marketing site; unknown paths return a 43,090-byte branded 404 page with a
+      real 404 status (no soft-200 catch-all).
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/mcp.json
+        status: 404
+  - host: https://bardeen.ai
+    note: Apex host answers /.well-known/* with an 88-byte "Invalid .well-known request" body and a
+      404 status; every other path 301s to www.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://www.getwiq.ai
+    note: WIQ, the company's current enterprise product (published by Bardeen Inc). Same result —
+      404 on every discovery path.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+soft_404_control:
+  probed: https://www.bardeen.ai/.well-known/bardeen-control-probe-does-not-exist
+  status: 404
+  bytes: 43090
+  note: control probe confirms the host returns real 404 status codes, so the 404s above are
+    genuine absences rather than a catch-all masking a served document.

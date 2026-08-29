@@ -1,0 +1,85 @@
+generated: '2026-08-29'
+method: searched
+source: https://www.bardeen.ai/release-notes
+description: >-
+  Lifecycle posture for Bardeen, read from the company's own public surface on 2026-08-29. Bardeen
+  ships a browser-extension automation product, not an API, so most of the API lifecycle surface
+  (version headers, sunset policy, deprecation windows, an SLA against a callable endpoint) does
+  not exist. What DOES exist is a semver-versioned product changelog. What is absent — and would be
+  absent for any buyer looking for it — is a status page, a deprecation policy, and a published SLA.
+versioning:
+  scheme: semver
+  subject: browser extension / automation app
+  current: 2.80.0
+  current_date: '2024-08-06'
+  api_versioning: none
+  detail: changelog/bardeen-changelog.yml
+change_log:
+  published: true
+  url: https://www.bardeen.ai/release-notes
+  status: 200
+  stale_since: '2024-08-06'
+status_page:
+  published: false
+  probes:
+    - url: https://status.bardeen.ai
+      status: 0
+      note: NXDOMAIN
+    - url: https://www.bardeen.ai/status
+      status: 404
+  note: No status page found on any Bardeen host, and none linked from the site footer or the
+    support page. No StatusPage pointer is wired in apis.yml, because none is served.
+deprecation_policy:
+  published: false
+  sunset_header: unknown
+  rfc8594: false
+  note: >-
+    No deprecation or sunset policy is published. Individual product commands ARE deprecated in the
+    release notes (v2.60.0 deprecated the "Find a person's email address" enrichment command), but
+    there is no stated notice period, no migration window and no policy page. No Deprecation
+    pointer is wired, because a policy is what that check asserts and Bardeen publishes none.
+sla:
+  published: false
+  note: No uptime or support SLA published; Enterprise tier advertises "Premium Support" with no
+    stated targets.
+support:
+  url: https://www.bardeen.ai/support
+  status: 200
+  email: support@bardeen.ai
+  note: >-
+    The former help-center and community hosts have been retired — support.bardeen.ai and
+    community.bardeen.ai both now 301 to the marketing page https://www.bardeen.ai/support, and the
+    Zendesk knowledge-base articles they served (including the article answering "Is there a Bardeen
+    API or custom webhooks?") are no longer reachable. Links to both hosts are still live in the
+    site footer and on the security page.
+retired_surfaces:
+  - surface: Developer program / SDK
+    url: https://www.bardeen.ai/developer-program
+    status: 301
+    redirects_to: https://www.bardeen.ai/
+    note: The developer-program page that advertised early SDK access now redirects to the homepage.
+  - surface: Documentation host
+    url: https://docs.bardeen.ai
+    status: 0
+    note: NXDOMAIN — the host referenced by the previous apis.yml Documentation pointer no longer
+      resolves. The pointer has been removed rather than left asserting a page the company does not
+      serve.
+  - surface: Help center
+    url: https://support.bardeen.ai/
+    status: 301
+    redirects_to: https://www.bardeen.ai/support
+  - surface: Community forum
+    url: https://community.bardeen.ai/
+    status: 301
+    redirects_to: https://www.bardeen.ai/support
+successor_product:
+  name: WIQ
+  url: https://www.getwiq.ai
+  status: 200
+  note: >-
+    Bardeen Inc now also ships WIQ (getwiq.ai), the "Workflow Intelligence Platform" described on
+    Bardeen's own security page as Project Synthesis. The Chrome Web Store listing for the WIQ
+    Recorder extension names the publisher as "Bardeen Inc" with contact chrome-web-store@bardeen.ai,
+    which is how the two brands were tied together. WIQ v1.2.0 was updated 2026-08-28 — the company
+    is actively shipping even though bardeen.ai's release notes stopped in August 2024. WIQ publishes
+    no API, docs host, or /.well-known surface either (probed 2026-08-29).

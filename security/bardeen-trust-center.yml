@@ -1,14 +1,54 @@
-generated: '2026-07-11'
+generated: '2026-08-29'
 method: searched
 probe: true
 source: https://www.bardeen.ai/security
 url: https://www.bardeen.ai/security
+status: 200
+description: >-
+  Bardeen publishes its security, privacy and compliance posture on a single page at
+  https://www.bardeen.ai/security. There is no dedicated trust-center host (trust.bardeen.ai does
+  not resolve) and no self-serve document portal; the page states that a "Compliance and Security
+  Center" for continuous posture monitoring is available to Business and Enterprise customers only,
+  so certification reports are gated behind a commercial relationship.
 certifications:
-- SOC 2
-- GDPR
+  - name: SOC 2 Type 2
+    body: AICPA
+    since: '2024-04-01'
+    evidence: "As of April 1, 2024, we are proud to announce our compliance with the AICPA SOC 2
+      Type 2 standards, ensuring that our systems and processes meet rigorous criteria for security."
+  - name: GDPR
+    body: EU
+    evidence: "we adhere to the EU's GDPR compliance checklist for US companies, affirming our
+      commitment to data protection and privacy for our international users."
+  - name: CASA Tier 2
+    body: App Defense Alliance
+    evidence: "Bardeen meets the stringent requirements of Tier 2 and Tier 3 of the Cloud
+      Application Security Assessment (CASA) as defined by the App Defense Alliance."
+  - name: CASA Tier 3
+    body: App Defense Alliance
+    evidence: same statement as CASA Tier 2
+  - name: OWASP ASVS
+    body: OWASP
+    evidence: "built upon the industry-recognized OWASP Application Security Verification
+      Standard (ASVS)"
+controls:
+  encryption_in_transit: TLS 1.2
+  encryption_at_rest: AES-256
+  infrastructure_as_code: true
+  peer_review: true
+  dependency_scanning: true
+  data_residency_note: >-
+    App data is persisted in the user's local browser storage by default and not in Bardeen's cloud;
+    cloud instances used for always-on automations are described as having no storage and erasing
+    data when a playbook finishes.
+gated:
+  name: Compliance and Security Center
+  available_to: Business and Enterprise subscription tiers
+  self_serve: false
+  note: Continuous posture monitoring and certification artifacts are customer-only; no public
+    document request flow is published.
 evidence:
-- source: https://www.bardeen.ai/security
-  keywords:
-  - soc 2
-  - soc2
-  - gdpr
+  - source: https://www.bardeen.ai/security
+    status: 200
+    fetched: '2026-08-29'
+    keywords: [soc 2 type 2, gdpr, casa, owasp asvs, tls 1.2, aes-256]

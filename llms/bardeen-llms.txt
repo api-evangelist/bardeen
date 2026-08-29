@@ -1,0 +1,77 @@
+# Bardeen
+
+> Bardeen is an AI automation platform from Bardeen Inc (San Francisco, CA) that automates
+> repetitive go-to-market work — web scraping, web search, contact and company enrichment, and
+> AI-assisted data tasks — from a browser extension that runs against the sites and SaaS tools a
+> user is already logged into. Work is metered in credits, not API calls. The company also ships
+> WIQ (getwiq.ai), a "Workflow Intelligence Platform" that reconstructs business processes from
+> browser and system-of-record data.
+
+## Machine-readable contract status
+
+Bardeen publishes NO public API. Verified 2026-08-29 by probing every host the company controls:
+- No OpenAPI/Swagger at /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs
+  or /redoc on www.bardeen.ai, bardeen.ai or www.getwiq.ai (all 404).
+- No GraphQL endpoint (/graphql 404), no AsyncAPI, no gRPC/.proto, no WSDL.
+- No MCP server and no A2A agent card (/.well-known/agent-card.json and /.well-known/agent.json
+  return 404 on every host).
+- No /.well-known documents of any kind, including security.txt.
+- docs.bardeen.ai does not resolve (NXDOMAIN). https://www.bardeen.ai/developer-program, which
+  once advertised early SDK access, 301s to the homepage. The 3,155-URL sitemap contains no API,
+  developer, SDK or webhook page.
+Integration with Bardeen happens inside the product (native connectors to Google Sheets, Airtable,
+Notion, Salesforce, HubSpot, Pipedrive, Salesloft, Outreach, Lemlist and others) and through
+generic HTTP GET/POST actions that Bardeen makes as a CLIENT of other people's APIs.
+
+## Product
+
+- [Web Scraper](https://www.bardeen.ai/scraper): extract structured data from any web page.
+- [Web Search](https://www.bardeen.ai/web-search): automated prospect and company research.
+- [Enrichment](https://www.bardeen.ai/enrichment): validated emails and phone numbers.
+- [AI Tools](https://www.bardeen.ai/ai): AI-assisted qualification and summarisation.
+- [Integrations](https://www.bardeen.ai/integrations): the connector catalog.
+- [Templates](https://www.bardeen.ai/templates): prebuilt playbooks.
+- [Get started](https://www.bardeen.ai/start): install the browser extension.
+
+## Commercial
+
+- [Pricing](https://www.bardeen.ai/pricing): Free 100 credits; Basic $10/mo (100 credits);
+  Premium $50/mo (1,000 credits) or $480/yr (12,000 credits); Enterprise contact-sales.
+  Unused credits expire at the end of each billing period.
+- [Contact sales](https://www.bardeen.ai/contact-sales)
+- [Terms of Service](https://www.bardeen.ai/terms-of-service)
+- [Privacy Policy](https://www.bardeen.ai/privacy-policy)
+
+## Trust
+
+- [Security, Privacy & Compliance](https://www.bardeen.ai/security): AICPA SOC 2 Type 2 (since
+  2024-04-01), GDPR, CASA Tier 2 and Tier 3 (App Defense Alliance, built on OWASP ASVS). TLS 1.2
+  in transit, AES-256 at rest. Security contact: security@bardeen.ai. No security.txt is served.
+- No status page and no published SLA or deprecation policy.
+
+## Docs and support
+
+- [Support](https://www.bardeen.ai/support) — support@bardeen.ai. The former help center
+  (support.bardeen.ai) and community forum (community.bardeen.ai) now 301 here.
+- [Guides](https://www.bardeen.ai/guides)
+- [Answers](https://www.bardeen.ai/answers) and [App FAQs](https://www.bardeen.ai/app-faqs)
+- [Release Notes](https://www.bardeen.ai/release-notes) — semver product releases, latest v2.80.0
+  dated 2024-08-06.
+- [Blog](https://www.bardeen.ai/blog)
+
+## API Evangelist artifacts
+
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/apis.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/plans/bardeen-plans-pricing.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/rate-limits/bardeen-rate-limits.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/changelog/bardeen-changelog.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/lifecycle/bardeen-lifecycle.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/conformance/bardeen-conformance.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/packages/bardeen-packages.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/well-known/bardeen-well-known.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/security/bardeen-trust-center.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/security/bardeen-vulnerability-disclosure.yml
+- https://raw.githubusercontent.com/api-evangelist/bardeen/main/security/bardeen-domain-security.yml
+
+<!-- generated: 2026-08-29 | method: generated | source: apis.yml + repo artifacts + probes of
+     www.bardeen.ai, bardeen.ai and www.getwiq.ai on 2026-08-29 -->

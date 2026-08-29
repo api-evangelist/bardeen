@@ -3,87 +3,44 @@ specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
 provider: Bardeen
 providerId: bardeen
+generated: '2026-08-29'
+method: searched
+source: https://www.bardeen.ai/pricing
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-08-29'
+reconciled: true
+limit_count: 0
 tags:
   - AI Automation
   - Workflow Automation
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Bardeen API surface. Captures per-tier quotas,
-  burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to be replaced
-  with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Bardeen
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
+description: >-
+  Bardeen publishes no API rate limits, because Bardeen publishes no API. This file REPLACES a
+  2026-05-04 bulk-sweep scaffold that asserted X-RateLimit-* response headers, 10 req/min on a
+  free tier and 100 req/min on a professional tier — none of which Bardeen has ever documented,
+  and none of which can exist without a callable endpoint. Searched on 2026-08-29: the pricing
+  page publishes a credit meter, not a request meter; docs.bardeen.ai does not resolve (NXDOMAIN);
+  /developer-program 301s to the homepage; the sitemap's 3,155 URLs contain no API, developer,
+  webhook or SDK page. Consumption is bounded by monthly CREDITS (see
+  plans/bardeen-plans-pricing.yml), which is a quota, not a rate limit.
+headers: {}
+responseCodes: {}
+limits: []
+consumption_limits:
+  - name: Monthly credit allowance
+    scope: account
+    metric: credits
     timeFrame: month
-    applies:
-      - Bardeen
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Bardeen
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Bardeen
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Bardeen
-policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+    note: "Free 100, Basic 100, Premium 1,000/mo (12,000/yr annual), Enterprise custom. Unused
+      credits expire at the end of each billing period. Enforced in-product, not over an API."
+    source: https://www.bardeen.ai/pricing
+evidence:
+  - url: https://www.bardeen.ai/pricing
+    status: 200
+    finding: credit-metered plans, no request limits published
+  - url: https://docs.bardeen.ai
+    status: 0
+    finding: NXDOMAIN — documentation host no longer resolves
+  - url: https://www.bardeen.ai/developer-program
+    status: 301
+    finding: redirects to https://www.bardeen.ai/ — the developer/SDK program page is gone

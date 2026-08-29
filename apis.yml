@@ -1,8 +1,13 @@
 aid: bardeen
 name: Bardeen
-description: >-
-  Bardeen is an AI-powered automation platform for automating repetitive
-  tasks across web applications.
+description: Bardeen is an AI automation platform from Bardeen Inc (San Francisco, CA) that automates
+  repetitive go-to-market work — web scraping, web search, contact and company enrichment, and AI-assisted
+  data tasks — from a browser extension that runs against the sites and SaaS tools a user is already signed
+  in to. Work is metered in credits rather than API calls, and automations can run locally in the browser
+  or in Bardeen's cloud. The company also ships WIQ (getwiq.ai), a Workflow Intelligence Platform that
+  reconstructs how work actually happens from browser and system-of-record data. Bardeen consumes other
+  people's APIs through native connectors and generic HTTP actions; it publishes no public API of its
+  own.
 type: Index
 deliveryModel:
   model: unknown
@@ -29,81 +34,145 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bardeen.png
 tags:
-  - AI Automation
-  - Workflow-Automation
+- AI Automation
+- Workflow-Automation
+- Web-Scraping
+- Data-Enrichment
+- Browser-Extension
+- Sales-Automation
+- No-Code
+- Go-To-Market
 tags_raw:
-  - AI Automation
-  - Workflow Automation
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/bardeen/refs/heads/main/apis.yml
+- AI Automation
+- Workflow Automation
+- Web Scraping
+- Data Enrichment
+- Browser Extension
+- Sales Automation
+- No Code
+- Go To Market
+url: https://raw.githubusercontent.com/api-evangelist/bardeen/refs/heads/main/apis.yml
 created: '2026-03-27'
-modified: '2026-03-27'
+modified: '2026-08-29'
 specificationVersion: '0.23'
 apis:
-  - aid: bardeen:bardeen
-    name: Bardeen
-    description: >-
-      Bardeen is an AI-powered automation platform for automating repetitive
-      tasks across web applications.
-    humanURL: https://www.bardeen.ai
-    tags:
-      - AI Automation
-    properties:
-      - type: Documentation
-        url: https://docs.bardeen.ai
-common:
-  - type: TrustCenter
-    url: security/bardeen-trust-center.yml
-  - type: VulnerabilityDisclosure
-    url: security/bardeen-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/bardeen-domain-security.yml
-  - type: GitHubOrganization
-    url: https://github.com/bardeenai
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/bardeen
+- aid: bardeen:bardeen
+  name: Bardeen
+  description: Bardeen is an AI-powered automation platform for automating repetitive tasks across web
+    applications.
+  humanURL: https://www.bardeen.ai
+  tags:
+  - AI Automation
+  - Workflow Automation
+  - Web Scraping
+  - Data Enrichment
+  properties:
   - type: Website
     url: https://www.bardeen.ai
-  - type: Documentation
-    url: https://docs.bardeen.ai
-  - type: Integrations
-    url: https://www.bardeen.ai/integrations
+common:
+- type: TrustCenter
+  url: security/bardeen-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/bardeen-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/bardeen-domain-security.yml
+- type: GitHubOrganization
+  url: https://github.com/bardeenai
+- type: LinkedIn
+  url: https://www.linkedin.com/company/bardeen
+- type: Website
+  url: https://www.bardeen.ai
+- type: Integrations
+  url: https://www.bardeen.ai/integrations
+- type: Plans
+  url: plans/bardeen-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/bardeen-rate-limits.yml
+- type: ChangeLog
+  url: changelog/bardeen-changelog.yml
+- type: Lifecycle
+  url: lifecycle/bardeen-lifecycle.yml
+- type: Conformance
+  url: conformance/bardeen-conformance.yml
+- type: Packages
+  url: packages/bardeen-packages.yml
+- type: LLMsTxt
+  url: llms/bardeen-llms.txt
+- type: Compliance
+  url: https://www.bardeen.ai/security
+- type: Security
+  url: https://www.bardeen.ai/security
+- type: Pricing
+  url: https://www.bardeen.ai/pricing
+- type: TermsOfService
+  url: https://www.bardeen.ai/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.bardeen.ai/privacy-policy
+- type: SignUp
+  url: https://www.bardeen.ai/start
+- type: Support
+  url: https://www.bardeen.ai/support
+- type: Blog
+  url: https://www.bardeen.ai/blog
 integrations:
-  - name: Bardeen Logo Default
-  - name: Bardeen Scraper
-  - name: Bardeen Web Search
-  - name: Bardeen Enrichment
-  - name: Bardeen AI Tools
-  - name: Google Sheets
-  - name: Airtable
-  - name: Notion
-  - name: Bardeen Recruiting
-  - name: Bardeen Music
-  - name: Bardeen Real Estate
-  - name: Bardeen VPs
-  - name: Bardeen Event Services
-  - name: Bardeen Blog
-  - name: Bardeen Customer Stories
-  - name: Bardeen Logo Icon Default
-  - name: Bardeen Careers
-  - name: Bardeen Community
-  - name: Bardeen Templates
-  - name: Bardeen Credits
-  - name: Bardeen CSV
-  - name: Salesforce
-  - name: HubSpot
-  - name: Pipedrive
-  - name: Monday.com
-  - name: SmartSuite
-  - name: Zoho
-  - name: Salesloft
-  - name: Lemlist
-  - name: Outreach
-  - name: GDPR Certified
-  - name: AICPA SOC2 Certificate
-  - name: CASA Tier 2 Certified
-  - name: CASA Tier 3 Certified
-  - name: deel
+- name: Bardeen Logo Default
+- name: Bardeen Scraper
+- name: Bardeen Web Search
+- name: Bardeen Enrichment
+- name: Bardeen AI Tools
+- name: Google Sheets
+- name: Airtable
+- name: Notion
+- name: Bardeen Recruiting
+- name: Bardeen Music
+- name: Bardeen Real Estate
+- name: Bardeen VPs
+- name: Bardeen Event Services
+- name: Bardeen Blog
+- name: Bardeen Customer Stories
+- name: Bardeen Logo Icon Default
+- name: Bardeen Careers
+- name: Bardeen Community
+- name: Bardeen Templates
+- name: Bardeen Credits
+- name: Bardeen CSV
+- name: Salesforce
+- name: HubSpot
+- name: Pipedrive
+- name: Monday.com
+- name: SmartSuite
+- name: Zoho
+- name: Salesloft
+- name: Lemlist
+- name: Outreach
+- name: GDPR Certified
+- name: AICPA SOC2 Certificate
+- name: CASA Tier 2 Certified
+- name: CASA Tier 3 Certified
+- name: deel
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-29'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: 'Bardeen ships a browser-extension automation product and no API: docs.bardeen.ai is NXDOMAIN,
+    https://www.bardeen.ai/developer-program (which once advertised early SDK access) 301s to the homepage,
+    and none of the 3,155 URLs in the sitemap is an API, SDK, webhook or developer page.'
+  evidence:
+  - url: https://docs.bardeen.ai
+    status: 0
+  - url: https://www.bardeen.ai/developer-program
+    status: 301
+  - url: https://www.bardeen.ai/openapi.json
+    status: 404
+  - url: https://www.bardeen.ai/.well-known/agent-card.json
+    status: 404
+  - url: https://www.getwiq.ai/openapi.json
+    status: 404
+  checked: '2026-08-29'

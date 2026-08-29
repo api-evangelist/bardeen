@@ -1,0 +1,73 @@
+generated: '2026-08-29'
+method: searched
+source: https://www.bardeen.ai/security
+description: >-
+  Standards and compliance posture for Bardeen. Bardeen publishes no machine-readable API contract
+  (see x-coverage in apis.yml), so no API-level standard — OAuth 2.0, OIDC, RFC 9457 problem
+  details, JSON:API, pagination or idempotency conventions — can be asserted from a contract, and
+  none is asserted here. What Bardeen DOES publish, on its own security page, is a security and
+  privacy compliance program with named, dated certifications. Those are recorded below with the
+  exact page they were read from.
+standards:
+  - id: soc2-type2
+    name: AICPA SOC 2 Type 2
+    conforms: true
+    since: '2024-04-01'
+    evidence: >-
+      "As of April 1, 2024, we are proud to announce our compliance with the AICPA SOC 2 Type 2
+      standards" — https://www.bardeen.ai/security
+    source: https://www.bardeen.ai/security
+  - id: gdpr
+    name: EU General Data Protection Regulation
+    conforms: true
+    evidence: >-
+      "we adhere to the EU's GDPR compliance checklist for US companies" —
+      https://www.bardeen.ai/security
+    source: https://www.bardeen.ai/security
+  - id: casa-tier-2
+    name: App Defense Alliance CASA Tier 2
+    conforms: true
+    evidence: >-
+      "Bardeen meets the stringent requirements of Tier 2 and Tier 3 of the Cloud Application
+      Security Assessment (CASA) as defined by the App Defense Alliance" —
+      https://www.bardeen.ai/security
+    source: https://www.bardeen.ai/security
+  - id: casa-tier-3
+    name: App Defense Alliance CASA Tier 3
+    conforms: true
+    evidence: same statement as CASA Tier 2 on https://www.bardeen.ai/security
+    source: https://www.bardeen.ai/security
+  - id: owasp-asvs
+    name: OWASP Application Security Verification Standard
+    conforms: true
+    evidence: >-
+      CASA is described on the page as "built upon the industry-recognized OWASP Application
+      Security Verification Standard (ASVS)".
+    source: https://www.bardeen.ai/security
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      Bardeen implements a custom OAuth flow as an OAuth CLIENT against third-party integrations
+      (the security page names the webNavigation extension permission as required for it), but
+      publishes no OAuth authorization server of its own — /.well-known/oauth-authorization-server
+      returns 404 on every host.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: no public API contract to assess
+  - id: openapi
+    conforms: false
+    evidence: >-
+      No OpenAPI/Swagger document found. Probed /openapi.json, /openapi.yaml, /swagger.json,
+      /v1/openapi.json, /api-docs, /redoc on www.bardeen.ai, bardeen.ai and www.getwiq.ai —
+      all 404.
+domain_standards:
+  assessed: true
+  found: []
+  note: >-
+    Bardeen's market (browser automation / GTM data enrichment) has no ratified interchange standard
+    that a contract could declare, and Bardeen declares none. Reward-only check — recorded as
+    assessed-and-absent, not as a failure.
+encryption:
+  in_transit: TLS 1.2
+  at_rest: AES-256
+  source: https://www.bardeen.ai/security

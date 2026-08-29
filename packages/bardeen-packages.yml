@@ -1,0 +1,67 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org, api.github.com/orgs/bardeenai, chromewebstore.google.com,
+  and the bardeen.ai site/sitemap
+description: >-
+  Bardeen ships NO first-party client libraries. There is no API to wrap: docs.bardeen.ai does not
+  resolve, the developer-program/SDK page redirects to the homepage, and the 3,155-URL sitemap
+  contains no SDK, API or developer page. Registries were searched anyway and are recorded below as
+  negative results. No SDKs pointer is wired in apis.yml, because no official client library exists.
+  The product's only first-party distribution artifact is a browser extension, recorded under
+  distributions[] with the version and date read from the store listing.
+package_count: 0
+packages: []
+registries_searched:
+  - registry: npm
+    query: bardeen
+    endpoint: https://registry.npmjs.org/-/v1/search?text=bardeen
+    result: no first-party package — 20 results returned, all unrelated third-party forks
+  - registry: pypi
+    queries: [bardeen, bardeen-ai, bardeenai]
+    result: >-
+      "bardeen" exists (1.4.2, last uploaded 2017-02-14) but is an unrelated "collection of
+      scientific utilities" by github.com/mverleg — NOT first-party. bardeen-ai and bardeenai
+      return 404.
+  - registry: github
+    endpoint: https://api.github.com/orgs/bardeenai/repos
+    result: >-
+      10 public repos, 7 of them forks of other projects (rudder-sdk-js, DefinitelyTyped,
+      transformers). No client library, no SDK, no .proto, no spec. Most recent push 2023-10-21.
+  - registry: rubygems
+    result: not searched — no Ruby surface indicated anywhere in the provider's own material
+  - registry: crates.io
+    result: not searched — no Rust surface indicated anywhere in the provider's own material
+  - registry: nuget
+    result: not searched — no .NET surface indicated anywhere in the provider's own material
+  - registry: maven-central
+    result: not searched — no JVM surface indicated anywhere in the provider's own material
+distributions:
+  - name: WIQ Recorder
+    kind: browser-extension
+    registry: chrome-web-store
+    url: https://chromewebstore.google.com/detail/wiq-map-how-work-actually/okchoigmpmneealibkekgojjfehdkjpd
+    version: 1.2.0
+    published: '2026-08-28'
+    official: true
+    publisher: Bardeen Inc
+    publisher_contact: chrome-web-store@bardeen.ai
+    note: >-
+      The companion extension for WIQ (getwiq.ai), Bardeen Inc's current enterprise product. Listed
+      here because it is the company's only dated, first-party, publicly-versioned distribution
+      artifact — it is a product install, not a client library, so it does not count as an SDK.
+      Its 2026-08-28 update is the strongest available evidence that the company is actively
+      shipping despite bardeen.ai's release notes stopping in August 2024.
+  - name: Bardeen browser extension
+    kind: browser-extension
+    registry: cdn
+    url: https://www.bardeen.ai/start
+    version: null
+    published: null
+    official: true
+    note: >-
+      The Bardeen app itself installs from https://www.bardeen.ai/start (a noindex single-page app;
+      https://www.bardeen.ai/download 301s to it). The install entry point is unpinned and names no
+      version, so a consumer cannot tell which build they are getting either — recorded as null
+      rather than guessed. The last version the company published anywhere is 2.80.0 (2024-08-06,
+      release notes).
