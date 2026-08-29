@@ -52,6 +52,9 @@ tags_raw:
 - No Code
 - Go To Market
 url: https://raw.githubusercontent.com/api-evangelist/bardeen/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Bardeen consumes other people's APIs through native connectors and generic HTTP actions; it publishes no public API of its own."
 created: '2026-03-27'
 modified: '2026-08-29'
 specificationVersion: '0.23'
