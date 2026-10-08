@@ -149,3 +149,44 @@ notes:
   - "plan_count is 4: the free 100-credit allowance every account keeps, plus the three published
     tiers (Basic $10/mo, Premium $50/mo or $480/yr, Enterprise contact-sales)."
   - "No plan sells API access. Bardeen publishes no API, so no plan carries an API request quota."
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units:
+  - credit
+  plans:
+  - name: Free
+    access: freemium
+    model: free
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - month
+  - name: Basic
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - month
+  - name: Premium
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - month
+    - year
+  - name: Enterprise
+    access: enterprise
+    model: free
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - term
