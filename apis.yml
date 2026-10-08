@@ -80,6 +80,8 @@ apis:
   - type: Website
     url: https://www.bardeen.ai
 common:
+- type: FinOps
+  url: finops/bardeen-finops.yml
 - type: TrustCenter
   url: security/bardeen-trust-center.yml
 - type: VulnerabilityDisclosure
