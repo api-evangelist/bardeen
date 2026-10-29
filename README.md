@@ -1,4 +1,4 @@
-# Bardeen (bardeen)
+# Bardeen
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,49 +64,112 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Bardeen is an AI-powered automation platform for automating repetitive tasks across web applications.
+Bardeen is an AI automation platform from Bardeen Inc (San Francisco, CA) that automates repetitive go-to-market work — web scraping, web search, contact and company enrichment, and AI-assisted data tasks — from a browser extension that runs against the sites and SaaS tools a user is already signed in to. Work is metered in credits rather than API calls, and automations can run locally in the browser or in Bardeen's cloud. The company also ships WIQ (getwiq.ai), a Workflow Intelligence Platform that reconstructs how work actually happens from browser and system-of-record data. Bardeen consumes other people's APIs through native connectors and generic HTTP actions; it publishes no public API of its own.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/bardeen/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/bardeen/refs/heads/main/apis.yml)
+**Areas:** AI Automation · Workflow Automation · Web Scraping · Data Enrichment · Browser Extension · Sales Automation · No-Code · Go-To-Market
 
-## Scope
+## Bardeen on APIs.io
 
-- **Type:** Index
+Everything profiled for Bardeen is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bardeen/](https://apis.io/providers/bardeen/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- AI Automation
-- Workflow Automation
+- [Bardeen](https://apis.io/apis/bardeen/bardeen/) — Bardeen is an AI-powered automation platform for automating repetitive tasks across web applications.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-27
-- **Modified:** 2026-03-27
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (3)
 
-### Bardeen
+Authentication, trust centre, and vulnerability disclosure.
 
-Bardeen is an AI-powered automation platform for automating repetitive tasks across web applications.
+- [Bardeen Domain Security](https://apis.io/security/bardeen/bardeen-domain-security/)
+- [Bardeen Trust Center](https://apis.io/security/bardeen/bardeen-trust-center/)
+- [Bardeen Vulnerability Disclosure](https://apis.io/security/bardeen/bardeen-vulnerability-disclosure/)
 
-- **Human URL:** [https://www.bardeen.ai](https://www.bardeen.ai)
+#### Plans and pricing (1)
 
-#### Tags
+Published plans, tiers and prices.
 
-- AI Automation
+- [Bardeen Plans Pricing](https://apis.io/plans/bardeen/bardeen-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://docs.bardeen.ai)
+Published request limits.
 
-## Common Properties
+- [Bardeen Rate Limits](https://apis.io/rate-limits/bardeen/bardeen-rate-limits/)
 
-- [GitHub Organization](https://github.com/bardeenai)
-- [LinkedIn](https://www.linkedin.com/company/bardeen)
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Bardeen Finops](https://apis.io/finops/bardeen/bardeen-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.bardeen.ai)
-- [Documentation](https://docs.bardeen.ai)
-- [Integrations](https://www.bardeen.ai/integrations)
+- [Pricing](https://www.bardeen.ai/pricing)
+- [Sign up](https://www.bardeen.ai/start)
+- [Support](https://www.bardeen.ai/support)
+- [Blog](https://www.bardeen.ai/blog)
+- [Security](https://www.bardeen.ai/security)
+- [Compliance](https://www.bardeen.ai/security)
+- [Terms of service](https://www.bardeen.ai/terms-of-service)
+- [Privacy policy](https://www.bardeen.ai/privacy-policy)
+- [GitHub](https://github.com/bardeenai)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 34.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 92.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bardeen/](https://apis.io/providers/bardeen/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bardeen: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bardeen/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
