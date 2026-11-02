@@ -150,7 +150,7 @@ notes:
     tiers (Basic $10/mo, Premium $50/mo or $480/yr, Enterprise contact-sales)."
   - "No plan sells API access. Bardeen publishes no API, so no plan carries an API request quota."
 x-canonical:
-  generated: '2026-11-01'
+  generated: '2026-11-02'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - free
