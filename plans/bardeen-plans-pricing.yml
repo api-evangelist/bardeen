@@ -1,0 +1,192 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Bardeen
+providerId: bardeen
+generated: '2026-08-29'
+method: searched
+source: https://www.bardeen.ai/pricing
+docs: https://www.bardeen.ai/pricing
+created: '2026-05-04'
+modified: '2026-08-29'
+reconciled: true
+plan_count: 4
+tags:
+  - AI Automation
+  - Workflow Automation
+  - Web Scraping
+  - Data Enrichment
+description: >-
+  Bardeen's published plans, read from https://www.bardeen.ai/pricing on 2026-08-29. This file
+  REPLACES a 2026-05-04 bulk-sweep scaffold that invented API-request quotas and per-minute rate
+  limits for a product that does not sell API access. Bardeen is metered in CREDITS consumed by
+  in-product actions (scraping, web search, enrichment, AI tools), not in API calls — there is no
+  public API, so there is no per-request price to record. Unused credits expire at the end of each
+  billing period. Every account keeps 100 free credits.
+billing:
+  unit: credit
+  reset: monthly
+  rollover: false
+  rollover_note: "Unused credits expire at the end of each billing period."
+  consumption:
+    - action: Scraper
+      credits_per_row: 1
+    - action: Web Search
+      credits_per_row: 1
+    - action: Enrichment
+      credits_per_row: 3
+    - action: AI Tools
+      credits_per_row: 1
+    - action: Utilities
+      credits_per_row: 0
+    - action: Import
+      credits_per_row: 0
+    - action: Export
+      credits_per_row: 1
+plans:
+  - id: bardeen-free
+    name: Free
+    type: freemium
+    currency: USD
+    price: '0.00'
+    period: month
+    description: Every Bardeen account keeps 100 free credits per billing period.
+    entries:
+      - label: Credits
+        name: credits
+        type: quota
+        metric: credits
+        limit: 100
+        timeFrame: month
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Scraper
+      - name: Web Search
+      - name: AI Tools
+  - id: bardeen-basic
+    name: Basic
+    type: paid
+    currency: USD
+    price: '10.00'
+    period: month
+    description: Entry paid tier at $10/month for 100 credits per month.
+    entries:
+      - label: Credits
+        name: credits
+        type: quota
+        metric: credits
+        limit: 100
+        timeFrame: month
+        unit: 1
+        price: '10.00'
+        userMultiplied: false
+    elements:
+      - name: Build your own scrapers
+      - name: Premium scrapers
+      - name: Enrichment
+      - name: Teams
+  - id: bardeen-premium
+    name: Premium
+    type: paid
+    currency: USD
+    price: '50.00'
+    period: month
+    annual_price: '480.00'
+    annual_note: "$480/year billed annually — the pricing page states a 20% saving; the annual plan
+      carries 12,000 credits for the year."
+    description: Production tier at $50/month for 1,000 credits per month (or $480/year for 12,000
+      credits per year).
+    entries:
+      - label: Credits
+        name: credits
+        type: quota
+        metric: credits
+        limit: 1000
+        timeFrame: month
+        unit: 1
+        price: '50.00'
+        userMultiplied: false
+      - label: Credits (annual)
+        name: credits_annual
+        type: quota
+        metric: credits
+        limit: 12000
+        timeFrame: year
+        unit: 1
+        price: '480.00'
+        userMultiplied: false
+    elements:
+      - name: Build your own scrapers
+      - name: Premium scrapers
+      - name: Enrichment
+      - name: Teams
+  - id: bardeen-enterprise
+    name: Enterprise
+    type: enterprise
+    currency: USD
+    price: contact-sales
+    period: custom
+    description: Custom bulk credits, custom scrapers built and maintained by Bardeen, premium
+      support. Price is not published — contact sales at https://www.bardeen.ai/contact-sales.
+    entries:
+      - label: Credits
+        name: credits
+        type: quota
+        metric: credits
+        limit: -1
+        timeFrame: custom
+        unit: 1
+        price: TBD
+        userMultiplied: false
+    elements:
+      - name: Everything in Premium
+      - name: Custom scrapers built by Bardeen
+      - name: Bardeen maintains customer scrapers
+      - name: Premium Support
+notes:
+  - "plan_count is 4: the free 100-credit allowance every account keeps, plus the three published
+    tiers (Basic $10/mo, Premium $50/mo or $480/yr, Enterprise contact-sales)."
+  - "No plan sells API access. Bardeen publishes no API, so no plan carries an API request quota."
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - free
+  units:
+  - credit
+  plans:
+  - name: Free
+    access: freemium
+    model: free
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - month
+  - name: Basic
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - month
+  - name: Premium
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - month
+    - year
+  - name: Enterprise
+    access: enterprise
+    model: free
+    model_how: derived
+    units:
+    - credit
+    periods:
+    - term
